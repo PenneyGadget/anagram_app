@@ -1,10 +1,11 @@
 dictionary = File.open(File.join(Rails.root, 'db', 'dictionary.txt'))
 
-puts "Go get a coffee, this will take a bit..."
+puts "Patience grasshopper..."
 
 Anagram.delete_all
 dictionary.each do |words|
   words.each_line do |word|
+    word.gsub!("\n", "")
     Anagram.create!(word: word)
   end
 end
