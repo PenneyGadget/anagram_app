@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101161907) do
+ActiveRecord::Schema.define(version: 20161101192449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "anagrams", force: :cascade do |t|
-    t.string   "word"
+  create_table "words", force: :cascade do |t|
+    t.text     "words"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
